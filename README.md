@@ -140,7 +140,7 @@ Il repository è **privato** e i **CSV non sono su GitHub** (`.gitignore`).
 Per eseguire tutto in Colab con un solo click, usare il notebook di setup:
 
 **Link Colab diretto:**
-https://colab.research.google.com/github/juliet4b/ML_SingleCell_Classification/blob/main/notebooks/SingleCell_Colab_Setup.ipynb
+https://colab.research.google.com/github/juliet4b/Single-Cell_RNA-seq_Classification/blob/main/notebooks/SingleCell_Colab_Setup.ipynb
 
 `notebooks/SingleCell_Colab_Setup.ipynb` fa automaticamente:
 1. Monta Google Drive
@@ -151,7 +151,7 @@ https://colab.research.google.com/github/juliet4b/ML_SingleCell_Classification/b
 
 #### Passi per la studentessa (prima di condividere)
 
-1. Push del progetto pulito sul repo privato `juliet4b/ML_SingleCell_Classification`.
+1. Push del progetto pulito sul repo privato `juliet4b/Single-Cell_RNA-seq_Classification`.
 2. Invitare la professora come **collaborator** (Settings → Collaborators → Read).
 3. I 4 CSV sono nella cartella Drive condivisa [**data**](https://drive.google.com/drive/folders/1k0s5LaNHVm4Bb4TX4rPHkbb1gfz4CacI?usp=sharing)
    (`X_train.csv`, `y_train.csv`, `X_test.csv`, `y_test.csv`).
