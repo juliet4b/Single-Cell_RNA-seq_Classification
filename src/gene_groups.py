@@ -16,6 +16,21 @@ GENE_SUBGROUPS: dict[str, list[str]] = {
     "MHC": ["HLA-DRA", "HLA-DRB1", "HLA-DPA1", "HLA-DPB1"],
 }
 
+# Firmas trascrittomiche da Wilk et al. (2020), Nature Medicine
+WILK_SIGNATURES: dict[str, list[str]] = {
+    "interferon_response": ["IFI6", "IFI44L", "ISG15", "MX1", "STAT1", "ISG20"],
+    "monocitos_inflamatorios": ["S100A8", "S100A9", "IL1B", "TNF", "VCAN"],
+    "linfocitos_T_citotoxicos": ["GZMB", "PRF1", "GNLY", "NKG7"],
+}
+
+
+def signature_genes_present(
+    signatures: dict[str, list[str]], columns: list[str] | pd.Index
+) -> dict[str, list[str]]:
+    """Restituisce, per ogni firma, solo i geni presenti nelle colonne del dataset."""
+    col_set = set(columns)
+    return {name: [g for g in genes if g in col_set] for name, genes in signatures.items()}
+
 
 def categorize_genes(gene_names: list[str]) -> pd.DataFrame:
     """Assegna ogni gene a un sottogruppo (o 'Other')."""
